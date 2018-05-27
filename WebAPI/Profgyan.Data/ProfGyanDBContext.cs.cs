@@ -8,6 +8,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using System.Data.Entity;
+using Profgyan.DataModel;
 
 namespace Profgyan.Data
 {
@@ -24,21 +25,41 @@ namespace Profgyan.Data
         //}
     }
 
-    public class ProfGyanDBContext : IdentityDbContext<ProfGyanUser>
+    
+    public partial class ProfGyanDBContext : IdentityDbContext<ProfGyanUser>
     {
         public ProfGyanDBContext()
-            : base("Data Source=IN-L20042\\SQLSERVER2014;Database=ProfGyanDB;Integrated Security=False;User ID=sa;Password=Password1;MultipleActiveResultSets=true;", throwIfV1Schema: false)
+            : base("name=ProfGyanDBContext")
         {
         }
 
-        //public ProfGyanDBContext()
-        //    : base("Data Source=IN-L20042\\SQLSERVER2014;Database=ProfGyanDB;Integrated Security=False;User ID=sa;Password=Password1;MultipleActiveResultSets=true;", throwIfV1Schema: false)
-        //{
-        //} 
         public static ProfGyanDBContext Create()
         {
             return new ProfGyanDBContext();
         }
+
+        public virtual DbSet<Appointment> Appointments { get; set; }
+        public virtual DbSet<Attendance> Attendances { get; set; }
+        public virtual DbSet<BookMark> BookMarks { get; set; }
+        public virtual DbSet<Chat> Chats { get; set; }
+        public virtual DbSet<Course> Courses { get; set; }
+        public virtual DbSet<Document> Documents { get; set; }
+        public virtual DbSet<Enrollment> Enrollments { get; set; }
+        public virtual DbSet<Feedback> Feedbacks { get; set; }
+        public virtual DbSet<PaymentMode> PaymentModes { get; set; }
+        public virtual DbSet<Rating> Ratings { get; set; }
+        public virtual DbSet<Session> Sessions { get; set; }
+        public virtual DbSet<SocialMedia> SocialMedias { get; set; }
+        public virtual DbSet<Status> Status { get; set; }
+        public virtual DbSet<Subscription> Subscriptions { get; set; }
+        public virtual DbSet<SubscriptionTrainer_Map> SubscriptionTrainer_Map { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<Trainee> Trainees { get; set; }
+        public virtual DbSet<Trainer> Trainers { get; set; }
+        public virtual DbSet<TrainingType> TrainingTypes { get; set; }
+        public virtual DbSet<CommonDetail> CommonDetails { get; set; }
+        public virtual DbSet<TrainerDetail> TrainerDetails { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -57,6 +78,17 @@ namespace Profgyan.Data
             //AspNetUserLogins -> UserLogin
             modelBuilder.Entity<IdentityUserLogin>()
                 .ToTable("UserLogin");
+            
+            modelBuilder.Entity<Subscription>()
+                .Property(e => e.Comments)
+                .IsFixedLength();
+            
         }
     }
 }
+
+
+
+    
+
+

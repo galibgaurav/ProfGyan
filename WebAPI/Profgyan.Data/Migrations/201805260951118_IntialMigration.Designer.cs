@@ -7,13 +7,13 @@ namespace Profgyan.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InitailMigration : IMigrationMetadata
+    public sealed partial class IntialMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitailMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(IntialMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "201805200621093_InitailMigration"; }
+            get { return "201805260951118_IntialMigration"; }
         }
         
         string IMigrationMetadata.Source

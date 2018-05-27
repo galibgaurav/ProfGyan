@@ -74,21 +74,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201805200621093_InitailMigration.cs" />
-    <Compile Include="Migrations\201805200621093_InitailMigration.Designer.cs">
-      <DependentUpon>201805200621093_InitailMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201805260951118_IntialMigration.cs" />
+    <Compile Include="Migrations\201805260951118_IntialMigration.Designer.cs">
+      <DependentUpon>201805260951118_IntialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProfGyanDBContext.cs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201805200621093_InitailMigration.resx">
-      <DependentUpon>201805200621093_InitailMigration.cs</DependentUpon>
+    <ProjectReference Include="..\Profgyan.DataModel\Profgyan.DataModel.csproj">
+      <Project>{24b53e79-0db5-4adc-b41b-c16b6f72259b}</Project>
+      <Name>Profgyan.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Profgyan.Model\Profgyan.Model.csproj">
+      <Project>{36b2b5f5-adb7-4a9b-b63b-f1d5302caa17}</Project>
+      <Name>Profgyan.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201805260951118_IntialMigration.resx">
+      <DependentUpon>201805260951118_IntialMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

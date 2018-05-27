@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Profgyan.helper", "Profgyan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Profgyan.Model", "Profgyan.Model\Profgyan.Model.csproj", "{36B2B5F5-ADB7-4A9B-B63B-F1D5302CAA17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Profgyan.DataModel", "Profgyan.DataModel\Profgyan.DataModel.csproj", "{24B53E79-0DB5-4ADC-B41B-C16B6F72259B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{36B2B5F5-ADB7-4A9B-B63B-F1D5302CAA17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36B2B5F5-ADB7-4A9B-B63B-F1D5302CAA17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36B2B5F5-ADB7-4A9B-B63B-F1D5302CAA17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24B53E79-0DB5-4ADC-B41B-C16B6F72259B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24B53E79-0DB5-4ADC-B41B-C16B6F72259B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24B53E79-0DB5-4ADC-B41B-C16B6F72259B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24B53E79-0DB5-4ADC-B41B-C16B6F72259B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
